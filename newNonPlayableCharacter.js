@@ -60,14 +60,18 @@ function newNonPlayableCharacter(x, y) {
         stop()
     }
 
-    function walkWest() {
+    async function walkWest(time) {
         direction = 'west'
         element.src = `./assets/red-character/west.gif`
+        await sleep(time)
+        stop()
     }
 
-    function walkSouth() {
+    async function walkSouth(time) {
         direction = 'south'
         element.src = `./assets/red-character/south.gif`
+        await sleep(time)
+        stop()
     }
 
     function stop() {
